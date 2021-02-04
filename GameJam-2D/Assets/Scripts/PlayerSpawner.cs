@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class PlayerSpawner : MonoBehaviour
 {
+    GameObject player;
     private void Awake()
     {
-        //get player object
+        player = GameObject.FindGameObjectWithTag("Player");
+
     }
     void Start()
     {
-        //set player position to this gameobject position
+        if (player != null)
+            player.transform.position = gameObject.transform.position;        
     }
 }
