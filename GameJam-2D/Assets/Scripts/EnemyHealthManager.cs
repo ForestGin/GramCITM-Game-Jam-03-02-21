@@ -2,17 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class EnemyHealthManager : MonoBehaviour
 {
     public int MaxHealth;
     public int CurrentHealth;
-   
 
     // Start is called before the first frame update
     void Start()
     {
-        SetMaxHealth();
+        CurrentHealth = MaxHealth;
     }
 
     // Update is called once per frame
@@ -29,14 +27,13 @@ public class EnemyHealthManager : MonoBehaviour
         }
     }
 
+    public void HurtEnemy(int damageToGive)
+    {
+        CurrentHealth -= damageToGive;
+    }
+
     public void SetMaxHealth()
     {
         CurrentHealth = MaxHealth;
     }
-
-    public void HurtEnemy(int DamageToGive)
-    {
-        CurrentHealth -= DamageToGive;
-    }
-
 }
