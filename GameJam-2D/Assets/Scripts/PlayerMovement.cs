@@ -38,5 +38,6 @@ public class PlayerMovement : MonoBehaviour
         Vector2 lookdir = mouse_position - player_rb.position;
         float angle = Mathf.Atan2(lookdir.y, lookdir.x) * Mathf.Rad2Deg - 90f;
         weapon_rb.rotation = angle;
+        weapon_rb.position = player_rb.position;
     }
 }
