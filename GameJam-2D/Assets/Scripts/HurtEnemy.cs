@@ -5,6 +5,7 @@ using UnityEngine;
 public class HurtEnemy : MonoBehaviour
 {
     public int DamageToGive;
+    public GameObject Burst;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,7 @@ public class HurtEnemy : MonoBehaviour
         if (other.gameObject.tag == "Enemy")
         {
             other.gameObject.GetComponent<EnemyHealthManager>().HurtEnemy(DamageToGive);
+            Instantiate(Burst, transform.position, transform.rotation);
         }
     }
 }
