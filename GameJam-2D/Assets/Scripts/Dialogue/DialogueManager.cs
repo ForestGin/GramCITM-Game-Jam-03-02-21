@@ -118,7 +118,7 @@ public class DialogueManager : MonoBehaviour
         {
             yield return new WaitForSeconds(delay);
             dialogueText.GetComponent<TextMeshPro>().text += c;
-            AudioManager.instance.PlayClip(info.character.myVoice);
+            //AudioManager.instance.PlayClip(info.character.myVoice);
 
             if(CheckPunctuation(c))
             {
