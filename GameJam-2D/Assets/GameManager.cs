@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     static GameManager instance;
+    int index = 0;
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
@@ -23,10 +25,17 @@ public class GameManager : MonoBehaviour
     {
         
     }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            index++;
+            if(index> 3)
+            {
+                index = 0;
+            }
+            SceneManager.LoadScene(index);
+            
+        }
     }
 }
