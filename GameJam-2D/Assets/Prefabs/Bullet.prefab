@@ -82,7 +82,7 @@ SpriteRenderer:
   m_Size: {x: 3.47, y: 0.73}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!50 &6467800916640397405
@@ -157,3 +157,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageToGive: 5
+  Burst: {fileID: 5553405307815192084, guid: e58fb9eadfa206248b65f4b6f7812b54, type: 3}
