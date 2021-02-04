@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6467800916640397405}
   - component: {fileID: 6812386366591913904}
   - component: {fileID: 4614210055037094040}
-  - component: {fileID: 1208050436676092086}
+  - component: {fileID: 7472011616437582835}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -74,13 +74,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3633491916493110067, guid: a86ae66e9ace5ba4292ccbb034dcf867,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 74916a6c57a97b04e9ad2ad01bb21894, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.03, y: 0.05}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -101,11 +100,11 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!61 &6812386366591913904
 BoxCollider2D:
@@ -120,18 +119,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.00030016154, y: 0.00034043193}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.42, y: 0.44}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 0.375, y: 0.625}
+    newSize: {x: 0.03, y: 0.05}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.47, y: 0.73}
+  m_Size: {x: 0.12443672, y: 0.37503684}
   m_EdgeRadius: 0
 --- !u!114 &4614210055037094040
 MonoBehaviour:
@@ -145,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0eca3f3a8f36f214db323fb78c3be0f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1208050436676092086
+--- !u!114 &7472011616437582835
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157,5 +156,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6115e35c9e2ee44e9aa12b616217434, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamageToGive: 5
+  DamageToGive: 3
   Burst: {fileID: 5553405307815192084, guid: e58fb9eadfa206248b65f4b6f7812b54, type: 3}
