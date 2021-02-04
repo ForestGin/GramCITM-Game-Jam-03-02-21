@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     {
         weapon_rb = weapon.GetComponent(typeof(Rigidbody2D)) as Rigidbody2D;
         spriteRenderer = gameObject.GetComponent(typeof(SpriteRenderer)) as SpriteRenderer;
+
     }
 
     void Update()

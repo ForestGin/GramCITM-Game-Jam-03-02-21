@@ -17,6 +17,10 @@ public class PlayerHealthManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown("space"))//test if enemy dies
+        {
+            CurrentHealth -= 1;
+        }
 
         if (CurrentHealth <= 0)
         {
@@ -29,8 +33,8 @@ public class PlayerHealthManager : MonoBehaviour
         CurrentHealth = MaxHealth;
     }
 
-    public void HurtPlayer(int DmgToGive)
+    public void HurtPlayer(int DamageToGive)
     {
-        CurrentHealth -= DmgToGive;
+        CurrentHealth -= DamageToGive;
     }
 }
