@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b66c824f20ef87a4aa9180c4134f19ef, type: 3}
+  m_Name: DailogueRaton
+  m_EditorClassIdentifier: 
+  dialogueInfo:
+  - character: {fileID: 11400000, guid: 4564484def7d70649bf16bdc4e6a9d2f, type: 2}
+    myText: "S\xED, soy un rat\xF3n y estoy armado. Ten cuidaito con... \nOh......
+      t\xFA tambi\xE9n tienes un rat\xF3n y un arma. Vamos a calmarnos.\n"
+    characterEmotion: 0
+  - character: {fileID: 11400000, guid: 4564484def7d70649bf16bdc4e6a9d2f, type: 2}
+    myText: "Ah, esas son mis amigas las flechas, tambi\xE9n conocidas como las AWSD.
+      Extra\xF1o nombre. Las cosas han cambiado mucho desde que te fuiste."
+    characterEmotion: 0

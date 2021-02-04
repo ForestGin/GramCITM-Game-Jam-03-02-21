@@ -27,11 +27,11 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public bool inDialogue = false;
+    public bool inDialogue;
     public GameObject dialogueBox;
 
-    public GameObject dialogueName;
-    public GameObject dialogueText;
+    public Text dialogueName;
+    public Text dialogueText;
     public Image dialoguePortrait;
     public float delay = 0.001f;
 
@@ -86,14 +86,13 @@ public class DialogueManager : MonoBehaviour
         DialogueBase.Info info = dialogueInfo.Dequeue(); //recoge el primer dialogo
         completeText = info.myText;
 
-
-        dialogueName.GetComponent<TextMeshPro>().text = info.character.myName;
-        dialogueText.GetComponent<TextMeshPro>().text = info.myText;
-        dialogueText.GetComponent<TextMeshPro>().font = info.character.myFont.gameObject.GetComponent<TextMeshPro>().font;
+        dialogueText.text = info.myText;
+        dialogueName.text = info.character.myName;
+        dialogueText.font = info.character.myFont;
         info.ChangeEmotion();
         dialoguePortrait.sprite = info.character.MyPortrait;
 
-        dialogueText.GetComponent<TextMeshPro>().text = "";
+        dialogueText.text = "";
       StartCoroutine(TypeText(info));
 
     }
@@ -117,7 +116,7 @@ public class DialogueManager : MonoBehaviour
         foreach(char c in info.myText.ToCharArray())
         {
             yield return new WaitForSeconds(delay);
-            dialogueText.GetComponent<TextMeshPro>().text += c;
+            dialogueText.text += c;
             AudioManager.instance.PlayClip(info.character.myVoice);
 
             if(CheckPunctuation(c))
@@ -130,7 +129,7 @@ public class DialogueManager : MonoBehaviour
 
     private void CompleteText()
     {
-        dialogueText.GetComponent<TextMeshPro>().text = completeText;
+        dialogueText.text = completeText;
     }
 
    
@@ -140,6 +139,7 @@ public class DialogueManager : MonoBehaviour
     {
 
         dialogueBox.SetActive(false);
+        inDialogue = false;
     }
 
    

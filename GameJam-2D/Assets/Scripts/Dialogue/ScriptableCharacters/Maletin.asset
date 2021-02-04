@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 578dddeed146e4c4d834aa9730861520, type: 3}
-  m_Name: Raton
+  m_Name: Maletin
   m_EditorClassIdentifier: 
-  myName: "Rat\xF3n"
-  myVoice: {fileID: 0}
-  myFont: {fileID: 0}
+  myName: Maletin
+  myVoice: {fileID: 8300000, guid: b5606d0d226c7b14189c3178e1068b08, type: 3}
+  myFont: {fileID: 12800000, guid: f645789a5bfd5e94a911697baad1717f, type: 3}
   emotionPortraits:
     standard: {fileID: 0}
     happy: {fileID: 0}

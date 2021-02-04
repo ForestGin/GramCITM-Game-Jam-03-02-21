@@ -9,7 +9,7 @@ public class CharacterProfile : ScriptableObject
     public string myName;
     private Sprite myPortrait;
     public AudioClip myVoice;
-    public GameObject myFont;
+    public Font myFont;
 
     public Sprite MyPortrait
     {

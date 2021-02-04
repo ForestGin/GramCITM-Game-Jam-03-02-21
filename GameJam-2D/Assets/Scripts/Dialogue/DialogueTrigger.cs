@@ -24,6 +24,7 @@ public class DialogueTrigger : Interactable
     {
         if(nextDialogueOnInteract && !DialogueManager.instance.inDialogue)
         {
+            Debug.Log("Llega??");
             if (index < DB.Length -1)
             {
                 index++;
