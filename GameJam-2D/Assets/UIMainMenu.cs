@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 using UnityEngine.UI;
 
 public class UIMainMenu : MonoBehaviour
@@ -14,5 +16,6 @@ public class UIMainMenu : MonoBehaviour
     void OnStart()
     {
         Debug.Log("Game Started");
+        SceneManager.LoadScene(1);
     }
 }

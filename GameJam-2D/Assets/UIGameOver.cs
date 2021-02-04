@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIGameOver : MonoBehaviour
@@ -16,11 +17,11 @@ public class UIGameOver : MonoBehaviour
     }
     void OnRestart()
     {
-        Debug.Log("Game Restarted");
+        SceneManager.LoadScene(1);
     }
     void OnMainMenu()
     {
-        Debug.Log("OnMainMenu");
+        SceneManager.LoadScene(0);
     }
 
 }
