@@ -10,9 +10,9 @@ public class UIGameOver : MonoBehaviour
    
     void Start()
     {
-        restartBttn = transform.GetChild(1).GetComponent<Button>();
+        restartBttn = transform.GetChild(2).GetComponent<Button>();
         restartBttn.onClick.AddListener(OnRestart);
-        mainMenuBttn = transform.GetChild(2).GetComponent<Button>();
+        mainMenuBttn = transform.GetChild(3).GetComponent<Button>();
         mainMenuBttn.onClick.AddListener(OnMainMenu);
     }
     void OnRestart()

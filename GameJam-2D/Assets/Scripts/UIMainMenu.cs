@@ -10,12 +10,15 @@ public class UIMainMenu : MonoBehaviour
     Button playBttn;
     void Start()
     {
-        playBttn = GetComponentInChildren<Button>();
+        playBttn = transform.GetChild(2).GetComponent<Button>();
         playBttn.onClick.AddListener(OnStart);
+
+
     }
     void OnStart()
     {
         Debug.Log("Game Started");
         SceneManager.LoadScene(1);
     }
+
 }
