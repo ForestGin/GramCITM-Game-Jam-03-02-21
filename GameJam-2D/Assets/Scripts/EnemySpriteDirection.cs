@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 
+
 public class EnemySpriteDirection : MonoBehaviour
 {
     public AIPath aiPath;

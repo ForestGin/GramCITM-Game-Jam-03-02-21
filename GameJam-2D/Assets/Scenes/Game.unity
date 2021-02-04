@@ -325,6 +325,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 193782dedd9097d48a82175d8c73581d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Movement_Speed: 5
+  player_rb: {fileID: 857272524}
+  weapon_rb: {fileID: 1831539516}
+  weapon: {fileID: 1831539515}
+  cam: {fileID: 519420031}
 --- !u!50 &857272524
 Rigidbody2D:
   serializedVersion: 4
@@ -385,12 +390,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e55a91c7fb0857d48bba7380e2c94257, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bc72a3f7fecfcfc4b80c39dda9b88c57, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 30.000002, y: 30.000002}
+  m_Size: {x: 8, y: 8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
