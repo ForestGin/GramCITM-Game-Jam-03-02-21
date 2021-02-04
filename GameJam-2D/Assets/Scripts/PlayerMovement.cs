@@ -15,9 +15,12 @@ public class PlayerMovement : MonoBehaviour
     Vector2 movement;
     Vector2 mouse_position;
 
+    SpriteRenderer spriteRenderer;
+
     private void Start()
     {
         weapon_rb = weapon.GetComponent(typeof(Rigidbody2D)) as Rigidbody2D;
+        spriteRenderer = gameObject.GetComponent(typeof(SpriteRenderer)) as SpriteRenderer;
     }
 
     void Update()
@@ -27,6 +30,15 @@ public class PlayerMovement : MonoBehaviour
         movement.y = Input.GetAxisRaw("Vertical");
 
         mouse_position = cam.ScreenToWorldPoint(Input.mousePosition);
+
+        if (movement.x >= 0.01f)
+        {
+            spriteRenderer.flipX = false;
+        }
+        else if (movement.x <= -0.01f)
+        {
+            spriteRenderer.flipX = true;
+        }
 
     }
 
@@ -40,4 +52,6 @@ public class PlayerMovement : MonoBehaviour
         weapon_rb.rotation = angle;
         weapon_rb.position = player_rb.position;
     }
+
+
 }
