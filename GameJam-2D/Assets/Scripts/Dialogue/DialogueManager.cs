@@ -116,8 +116,10 @@ public class DialogueManager : MonoBehaviour
         foreach(char c in info.myText.ToCharArray())
         {
             yield return new WaitForSeconds(delay);
+
             dialogueText.text += c;
             AudioManager.instance.PlayClip(info.character.myVoice);
+
 
             if(CheckPunctuation(c))
             {

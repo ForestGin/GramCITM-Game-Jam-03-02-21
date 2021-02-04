@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+        cam = Camera.main;
         weapon_rb = weapon.GetComponent(typeof(Rigidbody2D)) as Rigidbody2D;
         player_spriteRenderer = gameObject.GetComponent(typeof(SpriteRenderer)) as SpriteRenderer;
         weapon_spriteRenderer = weapon.GetComponent(typeof(SpriteRenderer)) as SpriteRenderer;
