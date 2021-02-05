@@ -5,14 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public  enum GameState { MAIN_MENU, GAME_OVER, TUTORIAL,IN_GAME }
+    public enum GameState { MAIN_MENU, GAME_OVER, TUTORIAL, IN_GAME }
     static GameState gameState;
     public static GameManager instance;
     int index = 0;
     public GameObject playerPrefab;
     public GameObject player;
     public delegate void StateChanged();
-    public event StateChanged OnGameStateChanged; 
+    public event StateChanged OnGameStateChanged;
 
 
     private void Awake()
@@ -35,21 +35,21 @@ public class GameManager : MonoBehaviour
     }
     public void SetCurrentGameState(GameState gameState)
     {
-        switch(gameState)
+        switch (gameState)
         {
             case GameState.MAIN_MENU:
                 //init all values
                 SceneManager.LoadScene(0);
-              
+
                 break;
-            case GameState.TUTORIAL:       
-                SceneManager.LoadScene(1);
+            case GameState.TUTORIAL:
                 player.SetActive(true);
+                SceneManager.LoadScene(1);
                 break;
             case GameState.IN_GAME:
                 SceneManager.LoadScene(2);
                 //add index if more levels, load each level
-                
+
                 break;
             case GameState.GAME_OVER:
                 SceneManager.LoadScene(3);

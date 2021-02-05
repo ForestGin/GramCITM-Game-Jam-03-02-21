@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class PlayerMovement : MonoBehaviour
 {
     public float Movement_Speed = 5f;
@@ -14,43 +13,32 @@ public class PlayerMovement : MonoBehaviour
     public GameObject weapon;
     public Camera cam;
 
-    [HideInInspector]
-    public Vector2 movement;
+    Vector2 movement;
     Vector2 mouse_position;
 
     SpriteRenderer player_spriteRenderer;
     SpriteRenderer weapon_spriteRenderer;
+
+
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
     }
     private void Start()
     {
-        if (cam == null)
-            cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        cam = Camera.main;
         weapon_rb = weapon.GetComponent(typeof(Rigidbody2D)) as Rigidbody2D;
         player_spriteRenderer = gameObject.GetComponent(typeof(SpriteRenderer)) as SpriteRenderer;
         weapon_spriteRenderer = weapon.GetComponent(typeof(SpriteRenderer)) as SpriteRenderer;
     }
-    private void OnEnable()
-    {
-        if(cam == null)
-         cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-    }
-    private void OnDisable()
-    {
-        cam = null;
-    }
+
     void Update()
     {
         //Input
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-        if (cam != null)
-            mouse_position = cam.ScreenToWorldPoint(Input.mousePosition);
-        else
-            cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        mouse_position = cam.ScreenToWorldPoint(Input.mousePosition);
 
         if (movement.x >= 0.01f)
         {

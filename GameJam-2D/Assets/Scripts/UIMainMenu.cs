@@ -19,7 +19,7 @@ public class UIMainMenu : MonoBehaviour
     {
         am.PlayAudio("ButtonSelect");
         Debug.Log("Game Started");
-        GameManager.instance.SetCurrentGameState(GameManager.GameState.TUTORIAL);
+        SceneManager.LoadScene(1);
     }
 
 }
