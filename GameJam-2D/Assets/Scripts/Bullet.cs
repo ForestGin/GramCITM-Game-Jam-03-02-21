@@ -6,27 +6,27 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public GameObject explosion;
-
+    public GameObject e;
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //Instantiate explosion 
-        if (collision.gameObject.tag != "sensor")
+        if (collision.gameObject.tag == "Wall")
+        {
             Destroy(gameObject);
-        if (collision.gameObject.tag != "Background")
-            SoundFX.InstanceAM.PlayAudio("Hit");
+            SoundFX.InstanceAM.PlayAudio("HitMiss");
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag != "sensor")
-          Destroy(gameObject);
-        if(collision.tag != "Background")
-         SoundFX.InstanceAM.PlayAudio("Hit");
-
-        Instantiate(explosion, transform.position, transform.rotation);
-        Destroy(gameObject);
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Instantiate(explosion, transform.position, transform.rotation);
-        Destroy(gameObject);
+        if (collision.tag == "Enemy"|| collision.tag == "Spawner")
+        {
+            Destroy(gameObject);
+            SoundFX.InstanceAM.PlayAudio("Hit");
+        }if(collision.tag == "Wall")
+        {
+            Destroy(gameObject);
+            SoundFX.InstanceAM.PlayAudio("HitMiss");
+        }
+        e = Instantiate(explosion, transform.position, transform.rotation);
+        Destroy(e, 1);
     }
 }
