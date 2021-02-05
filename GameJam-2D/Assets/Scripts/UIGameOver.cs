@@ -16,16 +16,18 @@ public class UIGameOver : MonoBehaviour
         restartBttn.onClick.AddListener(OnRestart);
         mainMenuBttn = transform.GetChild(3).GetComponent<Button>();
         mainMenuBttn.onClick.AddListener(OnMainMenu);
+
+
     }
     void OnRestart()
     {
         am.PlayAudio("ButtonSelect");
-        SceneManager.LoadScene(1);
+        GameManager.instance.SetCurrentGameState(GameManager.GameState.IN_GAME);
     }
     void OnMainMenu()
     {
         am.PlayAudio("ButtonSelect");
-        SceneManager.LoadScene(0);
+        GameManager.instance.SetCurrentGameState(GameManager.GameState.MAIN_MENU);
     }
 
 }

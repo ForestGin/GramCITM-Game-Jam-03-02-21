@@ -13,6 +13,6 @@ public class PlayerSpawner : MonoBehaviour
     void Start()
     {
         if (player != null)
-            player.transform.position = gameObject.transform.position;        
+            player.GetComponent<PlayerMovement>().movement = gameObject.transform.position;        
     }
 }
