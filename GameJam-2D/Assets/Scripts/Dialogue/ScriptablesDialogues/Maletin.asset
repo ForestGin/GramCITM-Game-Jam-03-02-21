@@ -16,5 +16,6 @@ MonoBehaviour:
   - character: {fileID: 11400000, guid: 61a2558661137c64d9c8eb924a930603, type: 2}
     myText: "Grabadora: Si has encontrado este malet\xEDn est\xE1s de suerte. Seguro
       que has estudiado medicina y le puedes sacar provecho. Te recuerdo que en medicina
-      se da a la \"E\" para curarse. Nos vemos."
+      se da a la \"E\" para curarse. Aunque ya lo sabr\xE1s como fuiste m\xE9dico
+      de guerra. Nos vemos."
     characterEmotion: 0

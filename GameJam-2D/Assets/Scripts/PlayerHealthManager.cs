@@ -43,4 +43,10 @@ public class PlayerHealthManager : MonoBehaviour
         CurrentHealth -= DamageToGive;
         HealthBar.SetHealthBar(CurrentHealth);
     }
+
+    public void HealPlayer(int heal)
+    {
+        CurrentHealth += heal;
+        HealthBar.SetHealthBar(CurrentHealth);
+    }
 }
