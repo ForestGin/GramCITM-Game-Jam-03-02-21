@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5923388233593820225}
   - component: {fileID: 5923388233593820224}
   - component: {fileID: 4349327355531172955}
+  - component: {fileID: 289128220600127540}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -167,6 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 20
   CurrentHealth: 0
+  hurt: 0
 --- !u!114 &5923388233593820224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,3 +211,17 @@ MonoBehaviour:
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
     value: -1
+--- !u!114 &289128220600127540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5923388233593820227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a06c13260b9090c4790d312c89a4eccd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageToGive: 0
+  Burst: {fileID: 6630890761958315586, guid: d685665d919e28d42a83c5dc6e9d5211, type: 3}

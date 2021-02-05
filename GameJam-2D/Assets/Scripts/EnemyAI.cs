@@ -20,7 +20,7 @@ public class EnemyAI : MonoBehaviour
     void Start()
     {
 
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = GameManager.instance.player;
         target = player.GetComponent(typeof(Transform)) as Transform;
 
         seeker = GetComponent<Seeker>();

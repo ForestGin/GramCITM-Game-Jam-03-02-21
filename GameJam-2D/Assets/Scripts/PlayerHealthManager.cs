@@ -8,10 +8,14 @@ public class PlayerHealthManager : MonoBehaviour
     public int CurrentHealth;
     private HealthBar HealthBar;
 
+    SpriteRenderer player_spriteRenderer;
+    public bool hurt = false;
+
     // Start is called before the first frame update
     void Start()
     {
         SetMaxHealth();
+        player_spriteRenderer = gameObject.GetComponent(typeof(SpriteRenderer)) as SpriteRenderer;
     }
     private void OnEnable()
     {
@@ -23,13 +27,19 @@ public class PlayerHealthManager : MonoBehaviour
     {
         if (Input.GetKeyDown("space"))//test if enemy dies
         {
-            CurrentHealth -= 1;
+            HurtPlayer(1);
         }
 
         if (CurrentHealth <= 0)
         {
             GameManager.instance.SetCurrentGameState(GameManager.GameState.GAME_OVER);
             gameObject.SetActive(false);
+        }
+        if (!hurt) player_spriteRenderer.color = Color.white;
+        else if (hurt)
+        {
+            player_spriteRenderer.color = Color.red;
+            hurt = false;
         }
     }
 
@@ -41,6 +51,23 @@ public class PlayerHealthManager : MonoBehaviour
     public void HurtPlayer(int DamageToGive)
     {
         CurrentHealth -= DamageToGive;
-        HealthBar.SetHealthBar(CurrentHealth);
+        if (HealthBar != null)
+        {
+            HealthBar.SetHealthBar(CurrentHealth);
+        }
+        else
+        {
+            HealthBar = FindObjectOfType<HealthBar>();
+        }
+    }
+
+    public void HealPlayer(int heal)
+    {
+        if(CurrentHealth != MaxHealth)
+        {
+            CurrentHealth += heal;
+            HealthBar.SetHealthBar(CurrentHealth);
+        }
+        
     }
 }
