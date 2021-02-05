@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class DialogueManager : MonoBehaviour
 {
     private readonly List<char> punctuationCharacters = new List<char>
