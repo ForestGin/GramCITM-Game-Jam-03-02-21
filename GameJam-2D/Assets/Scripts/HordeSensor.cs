@@ -9,7 +9,7 @@ public class HordeSensor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Spawner = GameObject.Find("EnemySpawnPoint");
+        Spawner = transform.parent.gameObject; /*GameObject.Find("EnemySpawnPoint");*/
     }
 
     // Update is called once per frame
