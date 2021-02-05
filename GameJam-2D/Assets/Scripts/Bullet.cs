@@ -21,18 +21,11 @@ public class Bullet : MonoBehaviour
         {
             Destroy(gameObject);
             SoundFX.InstanceAM.PlayAudio("Hit");
-            e = Instantiate(explosion, transform.position, transform.rotation);
-            Destroy(e, 1);
         }
         if (collision.tag == "Wall")
         {
             Destroy(gameObject);
             SoundFX.InstanceAM.PlayAudio("HitMiss");
-
-            e = Instantiate(explosion, transform.position, transform.rotation);
-            Destroy(e, 1);
-        }
- 
         }
         e = Instantiate(explosion, transform.position, transform.rotation);
         Destroy(e, 1);
