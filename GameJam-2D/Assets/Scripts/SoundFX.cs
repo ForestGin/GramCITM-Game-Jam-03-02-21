@@ -23,7 +23,7 @@ public class SoundFX : MonoBehaviour
         mute = false;
         foreach (Sound s in sounds)
         {
-            s.source = gameObject.AddComponent<AudioSource>();
+            s.source = s.gameObject.AddComponent<AudioSource>();
             s.source.volume = s.volume;
             s.source.loop = s.loop;
             s.source.clip = s.clip;

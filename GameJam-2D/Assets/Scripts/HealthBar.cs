@@ -7,7 +7,6 @@ public class HealthBar : MonoBehaviour
 {
     private Text healthTxt;
     private Image healthImg;
-    private PlayerHealthManager playerHealthManager;
     void Start()
     {
         healthTxt = GetComponentInChildren<Text>();

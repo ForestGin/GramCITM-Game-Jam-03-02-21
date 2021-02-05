@@ -7,27 +7,16 @@ using UnityEngine;
 public class HurtEnemy : MonoBehaviour
 {
     public int DamageToGive;
-    public GameObject Burst;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    public GameObject BurstPrefab;
+    private GameObject brust;
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Enemy")
         {
             other.gameObject.GetComponent<EnemyHealthManager>().HurtEnemy(DamageToGive);
+            brust= Instantiate(BurstPrefab, transform.position, transform.rotation);
+            Destroy(brust, 1f);
             other.gameObject.GetComponent<EnemyHealthManager>().hurt = true;
-            Instantiate(Burst, transform.position, transform.rotation);
         }
 
     }

@@ -7,7 +7,6 @@ public class EnemyHealthManager : MonoBehaviour
 {
     public int MaxHealth;
     public int CurrentHealth;
-
     public bool hurt = false;
 
     SpriteRenderer enemy_spriteRenderer;
@@ -24,7 +23,7 @@ public class EnemyHealthManager : MonoBehaviour
     {
         if (Input.GetKeyDown("space"))//test if enemy dies
         {
-            CurrentHealth -= 1;
+            HurtEnemy(1);
         }
 
         if (CurrentHealth <= 0)
