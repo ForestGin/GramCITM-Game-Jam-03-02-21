@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-
 public class Bullet : MonoBehaviour
 {
     public GameObject explosion;
@@ -34,5 +33,8 @@ public class Bullet : MonoBehaviour
             Destroy(e, 1);
         }
  
+        }
+        e = Instantiate(explosion, transform.position, transform.rotation);
+        Destroy(e, 1);
     }
 }
