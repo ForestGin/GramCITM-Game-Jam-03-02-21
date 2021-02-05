@@ -9,6 +9,6 @@ Controls:
 
 Made by [Oscar Larios](https://github.com/Megaoski), [Jorge Mateo](https://github.com/senc1yo), [Allen Bateman](https://github.com/allenbateman) & [Pol Bosch](https://github.com/Xulu-u). Game Developer and Multimedia students of CITM UPC.
 
-Tileset and Sprites:
-
-- [Scut Pixel Tileset ](https://scut.itch.io/7drl-tileset-2018)
+Art from:
+- [UI Asset Pack](https://opengameart.org/content/ui-asset-pack)
+- [Scut Pixel Tileset](https://scut.itch.io/7drl-tileset-2018)
