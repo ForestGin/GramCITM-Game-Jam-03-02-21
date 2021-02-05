@@ -17,6 +17,7 @@ public class DialogueManager : MonoBehaviour
     public static DialogueManager instance;
     private void Awake()
     {
+        
         if (instance != null)
         {
             Debug.LogWarning("Fix this" + gameObject.name);
