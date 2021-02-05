@@ -11,4 +11,4 @@ Made by [Oscar Larios](https://github.com/Megaoski), [Jorge Mateo](https://githu
 
 Tileset and Sprites:
 
-[Scut Pixel Tileset ](https://scut.itch.io/7drl-tileset-2018)
+- [Scut Pixel Tileset ](https://scut.itch.io/7drl-tileset-2018)
