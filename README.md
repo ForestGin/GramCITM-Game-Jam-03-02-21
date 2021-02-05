@@ -8,6 +8,9 @@ Controls:
 - WASD to move. 
 - Mouse to aim.
 - Mouse Left Click to shoot.
+- F to interact.
+- P to pause.
+- ALT+F4 to quit. :)
 
 
 
