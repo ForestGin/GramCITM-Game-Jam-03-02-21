@@ -7,4 +7,4 @@ Controls:
 - Mouse to aim.
 - Mouse Left Click to shoot.
 
-Made by Oscar Larios, Jorge Mateo,  Allen Bateman & Pol Bosch. Game Developer and Multimedia students of CITM UPC.
+Made by [Oscar Larios](https://github.com/Megaoski), [Jorge Mateo](https://github.com/senc1yo), [Allen Bateman](https://github.com/allenbateman) & [Pol Bosch](https://github.com/Xulu-u). Game Developer and Multimedia students of CITM UPC.
