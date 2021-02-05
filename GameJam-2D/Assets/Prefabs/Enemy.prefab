@@ -225,5 +225,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a06c13260b9090c4790d312c89a4eccd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamageToGive: 5
+  DamageToGive: 10
   Burst: {fileID: 6630890761958315586, guid: d685665d919e28d42a83c5dc6e9d5211, type: 3}

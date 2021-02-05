@@ -21,10 +21,7 @@ public class EnemyHealthManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("space"))//test if enemy dies
-        {
-            HurtEnemy(1);
-        }
+      
 
         if (CurrentHealth <= 0)
         {

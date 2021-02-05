@@ -11,12 +11,14 @@ public class GiveBotiquin : Interactable
 
     private void Start()
     {
+        
         go = GameObject.FindGameObjectWithTag("Player");
         healing = go.GetComponent<Healing>();
         healing.enabled = false;
     }
     public override void Interact()
     {
+
         base.Interact();
         botiquinCanvas.SetActive(true);
         if(healing.enabled == false)

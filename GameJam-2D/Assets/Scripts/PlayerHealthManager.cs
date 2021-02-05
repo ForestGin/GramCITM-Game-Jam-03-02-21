@@ -25,11 +25,7 @@ public class PlayerHealthManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("space"))//test if enemy dies
-        {
-            HurtPlayer(1);
-        }
-
+        
         if (CurrentHealth <= 0)
         {
             GameManager.instance.SetCurrentGameState(GameManager.GameState.GAME_OVER);

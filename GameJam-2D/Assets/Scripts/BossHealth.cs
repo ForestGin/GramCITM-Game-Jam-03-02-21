@@ -14,7 +14,7 @@ public class BossHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.SetActive(false);
+       
         SetMaxHealth();
         enraged = false;
         used = false;
@@ -25,7 +25,7 @@ public class BossHealth : MonoBehaviour
     {
         if (alive)
         {
-
+            
             if (enraged)
             {
                 gameObject.GetComponent<SpriteRenderer>().color = Color.green;
@@ -36,6 +36,7 @@ public class BossHealth : MonoBehaviour
             {
 
                 gameObject.SetActive(false);
+                GameManager.instance.SetCurrentGameState(GameManager.GameState.MAIN_MENU);
 
             }
 
@@ -43,6 +44,19 @@ public class BossHealth : MonoBehaviour
             {
                 IsEnraged();
             }
+            else if(CurrentHealth >= MaxHealth / 2)
+            {
+                gameObject.GetComponent<EnemyAI>().speed = 200;
+            }
+
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Player")
+        {
+            collision.gameObject.GetComponent<PlayerHealthManager>().HurtPlayer(50);
         }
     }
 
