@@ -8,10 +8,14 @@ public class PlayerHealthManager : MonoBehaviour
     public int CurrentHealth;
     private HealthBar HealthBar;
 
+    SpriteRenderer player_spriteRenderer;
+    public bool hurt = false;
+
     // Start is called before the first frame update
     void Start()
     {
         SetMaxHealth();
+        player_spriteRenderer = gameObject.GetComponent(typeof(SpriteRenderer)) as SpriteRenderer;
     }
     private void OnEnable()
     {
@@ -30,6 +34,12 @@ public class PlayerHealthManager : MonoBehaviour
         {
             GameManager.instance.SetCurrentGameState(GameManager.GameState.GAME_OVER);
             gameObject.SetActive(false);
+        }
+        if (!hurt) player_spriteRenderer.color = Color.white;
+        else if (hurt)
+        {
+            player_spriteRenderer.color = Color.red;
+            hurt = false;
         }
     }
 

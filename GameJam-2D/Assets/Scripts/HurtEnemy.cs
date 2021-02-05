@@ -26,6 +26,7 @@ public class HurtEnemy : MonoBehaviour
         if (other.gameObject.tag == "Enemy")
         {
             other.gameObject.GetComponent<EnemyHealthManager>().HurtEnemy(DamageToGive);
+            other.gameObject.GetComponent<EnemyHealthManager>().hurt = true;
             Instantiate(Burst, transform.position, transform.rotation);
         }
 
