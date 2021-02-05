@@ -16,6 +16,7 @@ public class HurtEnemy : MonoBehaviour
             other.gameObject.GetComponent<EnemyHealthManager>().HurtEnemy(DamageToGive);
             brust= Instantiate(BurstPrefab, transform.position, transform.rotation);
             Destroy(brust, 1f);
+            other.gameObject.GetComponent<EnemyHealthManager>().hurt = true;
         }
 
     }

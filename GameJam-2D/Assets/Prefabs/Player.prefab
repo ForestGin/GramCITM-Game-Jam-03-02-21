@@ -128,7 +128,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5870165263899732489}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.123, y: 1.253, z: 0}
+  m_LocalPosition: {x: 0, y: 1.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5870165263864459281}
@@ -150,6 +150,7 @@ GameObject:
   - component: {fileID: 5870165264298476203}
   - component: {fileID: 5870165264298476202}
   - component: {fileID: 5870165264298476201}
+  - component: {fileID: 3943883991156394583}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -212,7 +213,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: bc72a3f7fecfcfc4b80c39dda9b88c57, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9716981, g: 0.9716981, b: 0.9716981, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -314,6 +315,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 20
   CurrentHealth: 0
+  hurt: 0
 --- !u!61 &5870165264298476201
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -340,3 +342,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &3943883991156394583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5870165264298476200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7d484891979aca42a6a3e5c40c1c317, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

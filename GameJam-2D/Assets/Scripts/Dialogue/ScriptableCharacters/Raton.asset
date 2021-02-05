@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myName: "Rat\xF3n"
   myVoice: {fileID: 8300000, guid: b5606d0d226c7b14189c3178e1068b08, type: 3}
-  myFont: {fileID: 12800000, guid: 58fe738d575e43a44836de710ffba7f5, type: 3}
+  myFont: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   emotionPortraits:
-    standard: {fileID: 0}
-    happy: {fileID: 0}
-    sad: {fileID: 0}
-    angry: {fileID: 0}
+    standard: {fileID: 21300000, guid: 58ed2dcfb2c78cc4ab8bb35c8204844d, type: 3}
+    happy: {fileID: 21300000, guid: 58ed2dcfb2c78cc4ab8bb35c8204844d, type: 3}
+    sad: {fileID: 21300000, guid: 58ed2dcfb2c78cc4ab8bb35c8204844d, type: 3}
+    angry: {fileID: 21300000, guid: 58ed2dcfb2c78cc4ab8bb35c8204844d, type: 3}
