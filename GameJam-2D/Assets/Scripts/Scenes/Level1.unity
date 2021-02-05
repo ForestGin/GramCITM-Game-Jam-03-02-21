@@ -165,8 +165,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< HEAD
-  m_RootOrder: 3
-=======
   m_RootOrder: 5
 >>>>>>> 00d2f743456cf3dec8a2208537c4797bba23d546
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
