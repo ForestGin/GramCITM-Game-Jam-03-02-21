@@ -6,6 +6,7 @@ public class HurtPlayer : MonoBehaviour
 {
     public int DamageToGive;
     public GameObject Burst;
+    private GameObject e;
     Transform player;
 
     // Start is called before the first frame update
@@ -22,11 +23,12 @@ public class HurtPlayer : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.tag == "Player")
         {
             other.gameObject.GetComponent<PlayerHealthManager>().HurtPlayer(DamageToGive);
             other.gameObject.GetComponent<PlayerHealthManager>().hurt = true;
-            Instantiate(Burst, player.position, player.rotation);
+            e =  Instantiate(Burst, player.position, player.rotation);
+            Destroy(e, 1f);
         }
     }
 }

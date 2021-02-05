@@ -7,25 +7,24 @@ public class EnemyAI : MonoBehaviour
 {
     GameObject player;
     Transform target;
+    public int maxSpeed,minSpeed;
     public float speed = 200f;
     public float nextWaypointDistance = 3f;
 
     Path path;
     int currentWaypoint = 0;
     bool reachedEnd = false;
-
     Seeker seeker;
     Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
-
         player = GameManager.instance.player;
         target = player.GetComponent(typeof(Transform)) as Transform;
 
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
-        
+        speed = Random.Range(minSpeed, maxSpeed);
         InvokeRepeating("UpdatePath", 0f, .5f);
     }
 

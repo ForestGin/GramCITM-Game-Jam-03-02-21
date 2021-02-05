@@ -16,9 +16,8 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public GameObject player;
     public delegate void StateChanged();
-    public event StateChanged OnGameStateChanged; 
-
-
+    public event StateChanged OnGameStateChanged;
+    TransitionLoader transitionLoader;
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
@@ -34,7 +33,7 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
-       
+        transitionLoader = FindObjectOfType<TransitionLoader>();
     }
     public void SetCurrentGameState(GameState gameState)
     {
@@ -46,8 +45,8 @@ public class GameManager : MonoBehaviour
                 if (player != null)
                     player.SetActive(false);
                 break;
-            case GameState.TUTORIAL:       
-                SceneManager.LoadScene(1);
+            case GameState.TUTORIAL:
+                transitionLoader.LoadScene();
                 if (player != null)
                     player.SetActive(true);
                 player.transform.position = new Vector2(0, 0);
