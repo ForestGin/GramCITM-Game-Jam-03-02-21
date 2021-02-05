@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public  enum GameState { MAIN_MENU, GAME_OVER, TUTORIAL,IN_GAME }
-    static GameState gameState;
+    public static GameState gameState;
     public static GameManager instance;
     int index = 0;
     public GameObject playerPrefab;
@@ -41,7 +41,8 @@ public class GameManager : MonoBehaviour
         {
             case GameState.MAIN_MENU:
                 //init all values
-                SceneManager.LoadScene(0);
+               // SceneManager.LoadScene(0);
+                StartCoroutine(transitionLoader.LoadScene(0));
                 if (player != null)
                     player.SetActive(false);
                 break;
@@ -52,7 +53,8 @@ public class GameManager : MonoBehaviour
                 player.transform.position = new Vector2(0, 0);
                 break;
             case GameState.IN_GAME:
-                SceneManager.LoadScene(2);
+              //  SceneManager.LoadScene(2);
+                StartCoroutine(transitionLoader.LoadScene(2));
                 if (player != null)
                     player.SetActive(true);
                 player.transform.position = new Vector2(0, 0);
