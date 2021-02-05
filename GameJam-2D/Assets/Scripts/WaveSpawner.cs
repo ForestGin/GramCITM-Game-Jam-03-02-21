@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WaveSpawner : MonoBehaviour
 {
+    public bool alive = false;
     public enum SpawnState { SPAWNING, WAITING, COUNTING};
 
     [System.Serializable]
@@ -36,28 +37,32 @@ public class WaveSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(state == SpawnState.WAITING)
+        if (alive)
         {
-            if(!EnemyIsAlive())
+            if (state == SpawnState.WAITING)
             {
-                WaveCompleted();
+                if (!EnemyIsAlive())
+                {
+                    WaveCompleted();
+                }
+                else
+                {
+                    return;
+                }
+            }
+
+            if (WaveCountdown <= 0)
+            {
+                if (state != SpawnState.SPAWNING)
+                {
+                    StartCoroutine(SpawnWave(waves[nextWave]));
+                }
             }
             else
             {
-                return;
+                WaveCountdown -= Time.deltaTime;
             }
-        }
 
-        if(WaveCountdown <= 0)
-        {
-            if(state != SpawnState.SPAWNING)
-            {
-                StartCoroutine( SpawnWave ( waves[nextWave] ) );
-            }
-        }
-        else
-        {
-            WaveCountdown -= Time.deltaTime;
         }
     }
 

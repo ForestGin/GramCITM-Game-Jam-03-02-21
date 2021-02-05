@@ -8,6 +8,9 @@ TagManager:
   - DialogueName
   - DialoguePortrait
   - DialogueText
+  - Spawner
+  - sensor
+  - Bullet
   layers:
   - Default
   - TransparentFX

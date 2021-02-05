@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public float Movement_Speed = 5f;
 
+
     public Rigidbody2D player_rb;
     public Rigidbody2D weapon_rb;
 
