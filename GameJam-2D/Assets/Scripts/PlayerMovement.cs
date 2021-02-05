@@ -74,7 +74,7 @@ public class PlayerMovement : MonoBehaviour
         weapon_rb.position = player_rb.position;
 
         if (angle >= 0) weapon_spriteRenderer.flipX = true;
-
+        else if (angle > 180) weapon_spriteRenderer.flipX = false;
         else weapon_spriteRenderer.flipX = false;
     }
 
