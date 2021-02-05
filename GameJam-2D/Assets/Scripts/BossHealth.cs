@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BossHealth : MonoBehaviour
 {
+    public bool alive = false;
     public int MaxHealth;
     public int CurrentHealth;
 
@@ -13,7 +14,7 @@ public class BossHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.SetActive(true);
+        gameObject.SetActive(false);
         SetMaxHealth();
         enraged = false;
         used = false;
@@ -22,23 +23,26 @@ public class BossHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (enraged)
+        if (alive)
         {
-            gameObject.GetComponent<SpriteRenderer>().color = Color.green;
-            //augmentar daño x2
-        }
 
-        if (CurrentHealth <= 0)
-        {
-            
-            gameObject.SetActive(false);
+            if (enraged)
+            {
+                gameObject.GetComponent<SpriteRenderer>().color = Color.green;
+                //augmentar daño x2
+            }
 
-        }
+            if (CurrentHealth <= 0)
+            {
 
-        if(!used &&CurrentHealth <= MaxHealth / 2)
-        {
-            IsEnraged();
+                gameObject.SetActive(false);
+
+            }
+
+            if (!used && CurrentHealth <= MaxHealth / 2)
+            {
+                IsEnraged();
+            }
         }
     }
 
