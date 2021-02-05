@@ -168,6 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 20
   CurrentHealth: 0
+  hurt: 0
 --- !u!114 &5923388233593820224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,4 +224,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageToGive: 0
-  Burst: {fileID: 0}
+  Burst: {fileID: 6630890761958315586, guid: d685665d919e28d42a83c5dc6e9d5211, type: 3}
