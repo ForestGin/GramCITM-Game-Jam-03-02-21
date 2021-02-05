@@ -14,12 +14,15 @@ public class PlayerMovement : MonoBehaviour
     public GameObject weapon;
     public Camera cam;
 
+    public Animator anim;
+
     [HideInInspector]
     public Vector2 movement;
     Vector2 mouse_position;
 
     SpriteRenderer player_spriteRenderer;
     SpriteRenderer weapon_spriteRenderer;
+
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
@@ -31,6 +34,8 @@ public class PlayerMovement : MonoBehaviour
         weapon_rb = weapon.GetComponent(typeof(Rigidbody2D)) as Rigidbody2D;
         player_spriteRenderer = gameObject.GetComponent(typeof(SpriteRenderer)) as SpriteRenderer;
         weapon_spriteRenderer = weapon.GetComponent(typeof(SpriteRenderer)) as SpriteRenderer;
+
+        anim = gameObject.GetComponent<Animator>();
     }
     private void OnEnable()
     {
@@ -60,6 +65,10 @@ public class PlayerMovement : MonoBehaviour
         {
             player_spriteRenderer.flipX = true;
         }
+
+        if (movement == Vector2.zero) anim.SetBool("IsRunning", false);
+        else anim.SetBool("IsRunning", true);
+
 
     }
 
