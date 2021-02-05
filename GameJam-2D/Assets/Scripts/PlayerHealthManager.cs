@@ -23,7 +23,7 @@ public class PlayerHealthManager : MonoBehaviour
     {
         if (Input.GetKeyDown("space"))//test if enemy dies
         {
-            CurrentHealth -= 1;
+            HurtPlayer(1);
         }
 
         if (CurrentHealth <= 0)
@@ -41,6 +41,13 @@ public class PlayerHealthManager : MonoBehaviour
     public void HurtPlayer(int DamageToGive)
     {
         CurrentHealth -= DamageToGive;
-        HealthBar.SetHealthBar(CurrentHealth);
+        if (HealthBar != null)
+        {
+            HealthBar.SetHealthBar(CurrentHealth);
+        }
+        else
+        {
+            HealthBar = FindObjectOfType<HealthBar>();
+        }
     }
 }

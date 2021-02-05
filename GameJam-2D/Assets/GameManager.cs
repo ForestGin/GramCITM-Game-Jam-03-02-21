@@ -30,12 +30,8 @@ public class GameManager : MonoBehaviour
         {
             DestroyImmediate(gameObject);
         }
-
-      //SpawnAudioManager();
         SpawnPlayer();
     }
-
-
     void Start()
     {
        
@@ -47,11 +43,14 @@ public class GameManager : MonoBehaviour
             case GameState.MAIN_MENU:
                 //init all values
                 SceneManager.LoadScene(0);
-              
+                if (player != null)
+                    player.SetActive(false);
                 break;
             case GameState.TUTORIAL:       
                 SceneManager.LoadScene(1);
-                player.SetActive(true);
+                if (player != null)
+                    player.SetActive(true);
+                player.transform.position = new Vector2(0, 0);
                 break;
             case GameState.IN_GAME:
                 SceneManager.LoadScene(2);
@@ -63,6 +62,8 @@ public class GameManager : MonoBehaviour
                 break;
             case GameState.GAME_OVER:
                 SceneManager.LoadScene(3);
+                if (player != null)
+                    player.SetActive(false);
                 break;
         }
     }

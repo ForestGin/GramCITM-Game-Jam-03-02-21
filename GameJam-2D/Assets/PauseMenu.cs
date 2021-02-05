@@ -23,11 +23,13 @@ public class PauseMenu : MonoBehaviour
             {
                 Time.timeScale = 0;
                 pauseMenu.SetActive(true);
+                GameManager.instance.player.SetActive(false);
             }
             else
             {
                 Time.timeScale = 1;
                 pauseMenu.SetActive(false);
+                GameManager.instance.player.SetActive(true);
             }
         }
 
@@ -36,6 +38,7 @@ public class PauseMenu : MonoBehaviour
     {
         am.PlayAudio("ButtonSelect");
         pauseMenu.SetActive(false);
+        GameManager.instance.player.SetActive(true);
         Time.timeScale = 1;
     }
     public void OnMainMenu()

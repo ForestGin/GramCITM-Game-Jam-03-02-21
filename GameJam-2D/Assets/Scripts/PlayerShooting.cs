@@ -37,7 +37,7 @@ public class PlayerShooting : MonoBehaviour
             GameObject bullet = Instantiate(bulletprefab, firePoint.position, firePoint.rotation);
             Rigidbody2D bullet_rb = bullet.GetComponent<Rigidbody2D>();
             bullet_rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
-
+            SoundFX.InstanceAM.PlayAudio("Shoot");
             time_last_shot = timeinmilisec + time_btw_shots;
         }
     }

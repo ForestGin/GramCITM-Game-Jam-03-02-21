@@ -157,4 +157,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageToGive: 3
-  Burst: {fileID: 5553405307815192084, guid: e58fb9eadfa206248b65f4b6f7812b54, type: 3}
+  BurstPrefab: {fileID: 5553405307815192084, guid: e58fb9eadfa206248b65f4b6f7812b54,
+    type: 3}

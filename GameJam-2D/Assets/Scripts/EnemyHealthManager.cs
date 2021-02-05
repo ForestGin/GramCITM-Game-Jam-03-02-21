@@ -7,7 +7,6 @@ public class EnemyHealthManager : MonoBehaviour
 {
     public int MaxHealth;
     public int CurrentHealth;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +18,7 @@ public class EnemyHealthManager : MonoBehaviour
     {
         if (Input.GetKeyDown("space"))//test if enemy dies
         {
-            CurrentHealth -= 1;
+            HurtEnemy(1);
         }
 
         if (CurrentHealth <= 0)
