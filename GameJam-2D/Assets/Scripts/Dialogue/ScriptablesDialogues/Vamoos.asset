@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueInfo:
   - character: {fileID: 11400000, guid: 4564484def7d70649bf16bdc4e6a9d2f, type: 2}
-    myText: Nos vemos
+    myText: Cya.
     characterEmotion: 0

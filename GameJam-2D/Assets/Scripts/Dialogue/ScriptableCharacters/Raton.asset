@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 578dddeed146e4c4d834aa9730861520, type: 3}
   m_Name: Raton
   m_EditorClassIdentifier: 
-  myName: "Rat\xF3n"
+  myName: Mouse
   myVoice: {fileID: 8300000, guid: b0fa2f304704bb54cb0390356aab8a37, type: 3}
   myFont: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   emotionPortraits:

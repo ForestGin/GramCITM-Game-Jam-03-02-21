@@ -20,10 +20,11 @@ public class Healing : MonoBehaviour
         
     }
 
-    private void OnLevelWasLoaded()
+    private void OnEnable()
     {
         cdHeal = GameObject.FindGameObjectWithTag("CDBotico");
     }
+
     // Update is called once per frame
     void Update()
     {

@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueInfo:
   - character: {fileID: 11400000, guid: 4564484def7d70649bf16bdc4e6a9d2f, type: 2}
-    myText: "S\xED, soy un rat\xF3n y estoy armado. Ten cuidaito con... \nOh......
-      t\xFA tambi\xE9n tienes un rat\xF3n y un arma. Vamos a calmarnos.\n"
+    myText: "Yes, I'm a mouse and yes, I have a gun. Be careful with... \nOh......
+      you have a gun and a mouse too. Lets chill then.\n"
     characterEmotion: 0
   - character: {fileID: 11400000, guid: 4564484def7d70649bf16bdc4e6a9d2f, type: 2}
-    myText: "Ah, esas son mis amigas las flechas, tambi\xE9n conocidas como las AWSD.
-      Extra\xF1o nombre. Las cosas han cambiado mucho desde que te fuiste."
+    myText: Ah, yes, those are my friends, the key arrows, AKA the WASD crew. Weird
+      nom, you see. Things have changed a lot since you leave.
     characterEmotion: 0

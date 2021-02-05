@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueInfo:
   - character: {fileID: 11400000, guid: 61a2558661137c64d9c8eb924a930603, type: 2}
-    myText: "Grabadora: Si has encontrado este malet\xEDn est\xE1s de suerte. Seguro
-      que has estudiado medicina y le puedes sacar provecho. Te recuerdo que en medicina
-      se da a la \"E\" para curarse. Aunque ya lo sabr\xE1s como fuiste m\xE9dico
-      de guerra. Nos vemos."
+    myText: 'Recorder: You just have found a kit... What a luck. little reminder
+      that in medicine you use the medic kits pressing the E key. You were a  war
+      medic so you know that for sure.
+
+      Cya.'
     characterEmotion: 0

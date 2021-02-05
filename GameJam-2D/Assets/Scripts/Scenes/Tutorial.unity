@@ -227,7 +227,7 @@ PrefabInstance:
     - target: {fileID: 5847439261564241966, guid: 5673e2f3c32f5c64a96c6f4ac297a429,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5847439261564241966, guid: 5673e2f3c32f5c64a96c6f4ac297a429,
         type: 3}
@@ -343,7 +343,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: a7a9368a160ce3a4a8280608c1112166, type: 3}
+    m_Font: {fileID: 12800000, guid: b833dd5621903ec48b90902f8c17f48f, type: 3}
     m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
@@ -364,6 +364,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 207681142}
   m_CullTransparentMesh: 0
+--- !u!1 &279295290 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6270909341496645890, guid: 6d50f8db6a42a3f4996e49250e49985b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1958346168}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &379663210
 GameObject:
   m_ObjectHideFlags: 0
@@ -647,7 +653,7 @@ PrefabInstance:
     - target: {fileID: 8160309095352362676, guid: 2b592c499e0d6964ab83664abe453c8c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8160309095352362676, guid: 2b592c499e0d6964ab83664abe453c8c,
         type: 3}
@@ -920,6 +926,8 @@ GameObject:
   - component: {fileID: 552862099}
   - component: {fileID: 552862098}
   - component: {fileID: 552862100}
+  - component: {fileID: 552862103}
+  - component: {fileID: 552862102}
   m_Layer: 0
   m_Name: Maletin
   m_TagString: Untagged
@@ -1081,6 +1089,42 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4, y: 4}
   m_EdgeRadius: 0
+--- !u!114 &552862102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552862094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 483676bf3e65f3047956e65c14029108, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactRange: 2
+  player: {fileID: 0}
+  DT: {fileID: 552862098}
+  botiquinCanvas: {fileID: 279295290}
+  healing: {fileID: 0}
+  go: {fileID: 0}
+--- !u!114 &552862103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552862094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 483676bf3e65f3047956e65c14029108, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactRange: 2
+  player: {fileID: 0}
+  DT: {fileID: 0}
+  botiquinCanvas: {fileID: 0}
+  healing: {fileID: 0}
+  go: {fileID: 0}
 --- !u!1 &554148780
 GameObject:
   m_ObjectHideFlags: 0
@@ -1137,10 +1181,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Siguiente
+  m_text: Next
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1314,10 +1358,15 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -8.19
       objectReference: {fileID: 0}
+    - target: {fileID: 5847439261354703038, guid: 5673e2f3c32f5c64a96c6f4ac297a429,
+        type: 3}
+      propertyPath: TimeBetweenWaves
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5847439261564241966, guid: 5673e2f3c32f5c64a96c6f4ac297a429,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5847439261564241966, guid: 5673e2f3c32f5c64a96c6f4ac297a429,
         type: 3}
@@ -1651,7 +1700,7 @@ PrefabInstance:
     - target: {fileID: 5847439261564241966, guid: 5673e2f3c32f5c64a96c6f4ac297a429,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5847439261564241966, guid: 5673e2f3c32f5c64a96c6f4ac297a429,
         type: 3}
@@ -27622,7 +27671,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 05a84f41ebf38d54ea0ddf1a0922aba7, type: 3}
     m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
@@ -33490,6 +33539,16 @@ PrefabInstance:
     - target: {fileID: 2785734347172831452, guid: 6d50f8db6a42a3f4996e49250e49985b,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270909341496645890, guid: 6d50f8db6a42a3f4996e49250e49985b,
+        type: 3}
+      propertyPath: m_Name
+      value: BotiquinPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270909341496645890, guid: 6d50f8db6a42a3f4996e49250e49985b,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8970975819322686319, guid: 6d50f8db6a42a3f4996e49250e49985b,

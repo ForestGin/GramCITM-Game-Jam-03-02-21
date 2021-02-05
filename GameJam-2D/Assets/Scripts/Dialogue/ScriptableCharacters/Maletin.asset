@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 578dddeed146e4c4d834aa9730861520, type: 3}
   m_Name: Maletin
   m_EditorClassIdentifier: 
-  myName: Maletin
-  myVoice: {fileID: 8300000, guid: b5606d0d226c7b14189c3178e1068b08, type: 3}
+  myName: Kit
+  myVoice: {fileID: 8300000, guid: b0fa2f304704bb54cb0390356aab8a37, type: 3}
   myFont: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   emotionPortraits:
     standard: {fileID: 21300000, guid: 27763895f2bfbe24e828ac7ebb1bab1a, type: 3}
