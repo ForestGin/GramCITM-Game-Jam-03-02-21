@@ -12,6 +12,8 @@ TagManager:
   - sensor
   - Bullet
   - Boss
+  - Wall
+  - CDBotico
   layers:
   - Default
   - TransparentFX

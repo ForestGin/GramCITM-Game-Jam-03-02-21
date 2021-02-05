@@ -63,11 +63,13 @@ public class PlayerHealthManager : MonoBehaviour
 
     public void HealPlayer(int heal)
     {
-        if(CurrentHealth != MaxHealth)
+        if (CurrentHealth != MaxHealth)
         {
             CurrentHealth += heal;
+            if (CurrentHealth > 100) CurrentHealth = 100;
             HealthBar.SetHealthBar(CurrentHealth);
         }
+        else return;
         
     }
 }
