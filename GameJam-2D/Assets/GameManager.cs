@@ -10,6 +10,10 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     int index = 0;
     public GameObject playerPrefab;
+    public GameObject audioManagerPrefab;
+    [HideInInspector]
+    public GameObject audioManager;
+    [HideInInspector]
     public GameObject player;
     public delegate void StateChanged();
     public event StateChanged OnGameStateChanged; 
@@ -26,12 +30,15 @@ public class GameManager : MonoBehaviour
         {
             DestroyImmediate(gameObject);
         }
+
+      //SpawnAudioManager();
+        SpawnPlayer();
     }
 
 
     void Start()
     {
-        SpawnPlayer();
+       
     }
     public void SetCurrentGameState(GameState gameState)
     {
@@ -48,6 +55,9 @@ public class GameManager : MonoBehaviour
                 break;
             case GameState.IN_GAME:
                 SceneManager.LoadScene(2);
+                if (player != null)
+                    player.SetActive(true);
+                player.transform.position = new Vector2(0, 0);
                 //add index if more levels, load each level
                 
                 break;
@@ -70,5 +80,14 @@ public class GameManager : MonoBehaviour
     {
         DestroyImmediate(player);
         player = null;
+    }
+    void SpawnAudioManager()
+    {
+        if (audioManager == null)
+        {
+            audioManager = Instantiate(audioManagerPrefab);
+        }
+        else
+        { DestroyImmediate(player); }
     }
 }
