@@ -9,7 +9,6 @@ public class NextLevel : MonoBehaviour
         if(collision.tag == "Player")
         {
             GameManager.instance.SetCurrentGameState(GameManager.GameState.IN_GAME);
-
         }
     }
 }

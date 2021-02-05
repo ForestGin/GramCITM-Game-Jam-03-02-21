@@ -10,12 +10,11 @@ public class Interactable : MonoBehaviour
     public Transform player;
 
 
-    private void Start()
-    {
+    private void Awake() {
         if(player == null)
-            player = GameManager.instance.player.transform;
+         player = GameManager.instance.player.transform;
+
     }
-  
     void Update()
     {
         if (Vector2.Distance(gameObject.transform.position, player.position) < interactRange && Input.GetKeyDown(KeyCode.F) && player != null)

@@ -6,14 +6,18 @@ public class PlayerHealthManager : MonoBehaviour
 {
     public int MaxHealth;
     public int CurrentHealth;
-
+    private HealthBar HealthBar;
 
     // Start is called before the first frame update
     void Start()
     {
         SetMaxHealth();
     }
-
+    private void OnEnable()
+    {
+        HealthBar = FindObjectOfType<HealthBar>();
+        SetMaxHealth();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -24,7 +28,8 @@ public class PlayerHealthManager : MonoBehaviour
 
         if (CurrentHealth <= 0)
         {
-            Destroy(gameObject);
+            GameManager.instance.SetCurrentGameState(GameManager.GameState.GAME_OVER);
+            gameObject.SetActive(false);
         }
     }
 
@@ -36,5 +41,6 @@ public class PlayerHealthManager : MonoBehaviour
     public void HurtPlayer(int DamageToGive)
     {
         CurrentHealth -= DamageToGive;
+        HealthBar.SetHealthBar(CurrentHealth);
     }
 }
