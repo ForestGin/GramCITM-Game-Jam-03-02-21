@@ -11,6 +11,7 @@ TagManager:
   - Spawner
   - sensor
   - Bullet
+  - Wall
   layers:
   - Default
   - TransparentFX
