@@ -3043,6 +3043,26 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: 1c71e707f27462b4f81110940c979664, type: 3}
   volume: 0.207
   loop: 0
+--- !u!1 &1157008858 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7378727074145622986, guid: 65fcec47aa640494b9a3935e483326e2,
+    type: 3}
+  m_PrefabInstance: {fileID: 7378727075168343568}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1157008860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1157008858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 660f9f86551f58d42a634dbed030bf47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transition: {fileID: 0}
+  transitionTime: 1
 --- !u!1 &1619243176 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7883907678253188000, guid: 53467c25789434541b6856d0f55209ca,
@@ -3378,6 +3398,142 @@ Canvas:
   m_SortingLayerID: 864306589
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1001 &7378727075168343568
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2448039638306561041, guid: 65fcec47aa640494b9a3935e483326e2,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 05a84f41ebf38d54ea0ddf1a0922aba7,
+        type: 3}
+    - target: {fileID: 2554578580618361509, guid: 65fcec47aa640494b9a3935e483326e2,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3614196275454604350, guid: 65fcec47aa640494b9a3935e483326e2,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5124381609918583827, guid: 65fcec47aa640494b9a3935e483326e2,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5124381609918583827, guid: 65fcec47aa640494b9a3935e483326e2,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 05a84f41ebf38d54ea0ddf1a0922aba7,
+        type: 3}
+    - target: {fileID: 5487089722159620105, guid: 65fcec47aa640494b9a3935e483326e2,
+        type: 3}
+      propertyPath: m_Text
+      value: 'tambien fue medico  en los Peace Corps
+
+        sirviendo en Sierra
+        Leona y Liberia.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5487089722159620105, guid: 65fcec47aa640494b9a3935e483326e2,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 05a84f41ebf38d54ea0ddf1a0922aba7,
+        type: 3}
+    - target: {fileID: 6725383887297778974, guid: 65fcec47aa640494b9a3935e483326e2,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 05a84f41ebf38d54ea0ddf1a0922aba7,
+        type: 3}
+    - target: {fileID: 7378727074145622986, guid: 65fcec47aa640494b9a3935e483326e2,
+        type: 3}
+      propertyPath: m_Name
+      value: LevelLoader
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378727074145622987, guid: 65fcec47aa640494b9a3935e483326e2,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378727074145622987, guid: 65fcec47aa640494b9a3935e483326e2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -21.848362
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378727074145622987, guid: 65fcec47aa640494b9a3935e483326e2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 15.98312
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378727074145622987, guid: 65fcec47aa640494b9a3935e483326e2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.054199
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378727074145622987, guid: 65fcec47aa640494b9a3935e483326e2,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378727074145622987, guid: 65fcec47aa640494b9a3935e483326e2,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378727074145622987, guid: 65fcec47aa640494b9a3935e483326e2,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378727074145622987, guid: 65fcec47aa640494b9a3935e483326e2,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378727074145622987, guid: 65fcec47aa640494b9a3935e483326e2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378727074145622987, guid: 65fcec47aa640494b9a3935e483326e2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378727074145622987, guid: 65fcec47aa640494b9a3935e483326e2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378727074750056302, guid: 65fcec47aa640494b9a3935e483326e2,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1801639017}
+    - target: {fileID: 7594056828196553268, guid: 65fcec47aa640494b9a3935e483326e2,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8484133860014415442, guid: 65fcec47aa640494b9a3935e483326e2,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8517237053963742687, guid: 65fcec47aa640494b9a3935e483326e2,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 65fcec47aa640494b9a3935e483326e2, type: 3}
 --- !u!1001 &7699627366200694237
 PrefabInstance:
   m_ObjectHideFlags: 0
